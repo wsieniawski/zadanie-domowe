@@ -28,7 +28,7 @@ public class FormStepDefinitions {
     public void i_am_on_first_page_of_form() {
         first = new FirstPage(driver);
         driver.get("https://app.bluealert.pl/ba/form/formularz-testowy");
-        assertThat(first.titleText.isDisplayed());
+        assertThat(first.titleText.isDisplayed()).isTrue();
     }
 
     @When("I enter (.*) into name field")
@@ -83,6 +83,6 @@ public class FormStepDefinitions {
     @Then("I am on second page")
     public void i_am_on_second_page() {
         second = new SecondPage(driver);
-        assertThat(second.titleText.isDisplayed());
+        assertThat(second.titleText.isDisplayed()).isTrue();
     }
 }
